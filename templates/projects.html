@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home - Cheav Por Chea Website</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div>
+        <h1>Welcome to CP. Chea Website</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li></li><a href="/">Home</a></li>
+                <div class="dropdown"> <button class="dropbtn">Publications
+                    <i class="fa fa-caret-down"></i>
+                  </button> 
+                    <!-- check what does this mean -->
+                    <div class="dropdown-content">
+                        <a href="/pub_robotic">Robotic Construction</a>
+                        <a href="/pub_structure">Structural Engineering</a>
+                        <a href="/pub_seismic">Seismic Engineering</a>
+                    </div>
+                </div>              
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/awards">Honors&Awards</a></li>
+                <li><a href="/documentations">Documentations</a></li>
+                <li><a href="/about">About Me</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <p> </p>
+    </div>
+
+
+<div class="background-container">
+    <div>
+        <!-- Paste your embed code here -->
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/69mJ5CEKS80" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+        </iframe>
+    </div>
+    <div class="text-content">
+        <h2>Robotic Construction For Reciprocal Frame Structure</h2>
+        <p> This research focuses on developing and implementing robotic technologies in the construction of Reciprocal Frame (RF) structures, which are self-interlocking and efficient in assembly. The study began with the development of mathematical approaches for forming RF structures and calculating internal forces in their components, using pultruded glass fibre reinforced polymers (GFRP). Experimental and finite element analysis revealed that an RF structure of specific dimensions had a significant load capacity while maintaining a low weight.</p>
+        <p> The research then progressed to robotize the assembly of these structures in a laboratory environment. Design for Robotic Construction (DfRC) strategies were introduced, including the use of temporary connections and supports to facilitate robotic assembly. The robotic system developed includes mobile robots, robotic arms, depth cameras, LiDAR systems, and grippers. Programming modules were created for geometric form-finding, robotic operation, and collaboration.</p>
+        <p> Key aspects of robotic operation, such as navigation and component targeting, were developed using SLAM and AprilTag algorithms, enhancing precision and efficiency. The result was the successful completion of the structural construction by the robotic system, demonstrating the feasibility and effectiveness of robotization in building RF structures.</p>
+    </div>
+</div>
+
+</div>
+<div><p></p></div>
+<div class="background-container">
+    <div>
+        <!-- Paste your embed code here -->
+        <iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/xt2ayJi6GDc" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+        </iframe>
+    </div>
+    <div class="text-content">
+        <h2>Paving robot</h2>
+        <p> This research focuses on developing and implementing robotic technologies in the pedestrian path paving project. The model-based tracking method is adopted to target a brick from the brick stack. </p> 
+        
+    </div>
+</div>
+
+</body>
+</html>

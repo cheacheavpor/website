@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home - Cheav Por Chea Website</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div>
+        <h1>Welcome to CP. Chea Website</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li></li><a href="/">Home</a></li>
+                <div class="dropdown"> <button class="dropbtn">Publications
+                    <i class="fa fa-caret-down"></i>
+                  </button> 
+                    <!-- check what does this mean -->
+                    <div class="dropdown-content">
+                        <a href="/pub_robotic">Robotic Construction</a>
+                        <a href="/pub_structure">Structural Engineering</a>
+                        <a href="/pub_seismic">Seismic Engineering</a>
+                    </div>
+                </div>              
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/awards">Honors&Awards</a></li>
+                <li><a href="/documentations">Documentations</a></li>
+                <li><a href="/about">About Me</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <p> </p>
+    </div>
+    <!-- <div>
+        <figure class="homeimage">
+            <img src="static/home.jpg" alt="My backgroud">
+            <figcaption>Graduated in Monash University</figcaption>
+        </figure>
+    </div> -->
+    <div>
+        <h2>Awards & Honours</h2>
+        <p><b>2022&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>&nbsp;&nbsp;&nbsp;&nbsp;Awarded the best student paper in the 9th International Conference on Innovative and Production and Construction (IPC 2022, Melbourne, Australia)</p>
+        <p><b>2019-2023: </b>&nbsp;&nbsp;&nbsp;&nbsp;Awarded full scholarship:</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tuition fees from the Faculty of Engineering International Postgraduate Research Scholarship (FEIPRS)</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stipend scholarship from Monash Research Scholarship (MRS)</p>
+        <p><b>2016-2019: </b>&nbsp;&nbsp;&nbsp;&nbsp;Awarded full government scholarship from Chinese Scholarship Council (CSC) </p>
+        <p><b>2018&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>&nbsp;&nbsp;&nbsp;&nbsp;Awarded the China Development Bank Distinguished International Student</p>
+        <p><b>2011-2016: </b>&nbsp;&nbsp;&nbsp;&nbsp;Awarded full government scholarship including tuition, lodging, stipend and comprehensive medical insurance from Chinese Scholarship Council (CSC) </p>
+        <p><b>2013-2016: </b>&nbsp;&nbsp;&nbsp;&nbsp;Awarded first grade scholarship of the department </p>
+        <p><b>2015&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>&nbsp;&nbsp;&nbsp;&nbsp;Won 3rd place in the 18th bridge contest of the SAMPE (Society for the advancement of Material and Process Engineering) held in Baltimore, USA.</p>
+        <p><b>2015&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>&nbsp;&nbsp;&nbsp;&nbsp;Won 3rd prize in the 6th Heilongjiang Province College Student Structural Design Competition of 2014 “Longshun Cup”.</p>
+        <p><b>2013&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>&nbsp;&nbsp;&nbsp;&nbsp;Won 3rd prize in the first “School Anniversary Cup” programming competition of Harbin Engineering University.</p>
+        
+        
+    </div> 
+    
+</body>
+</html>
