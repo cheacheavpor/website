@@ -88,12 +88,26 @@ ul {
     align-items: start; /* Vertically centers the items */
     justify-content: flex-start; /* Aligns items to the start of the container */
     gap: 20px; /* Adds space between the text and the image */
+
 }
 
 .background-container img {
     width: 40%; /* Adjust the width as needed */
     height: auto; /* Keeps the image aspect ratio */
 }
+.background-container-home {
+  display: flex;
+  align-items: center; /* Vertically centers the items */
+  justify-content: flex-start; /* Aligns items to the start of the container */
+  gap: 20px; /* Adds space between the text and the image */
+  font-size: 20px;
+}
+
+.background-container-home img {
+  width: 30%; /* Adjust the width as needed */
+  height: auto; /* Keeps the image aspect ratio */
+}
+
 .video-container {
     position: relative;
     width: 560px; /* Adjust as needed */
@@ -102,7 +116,191 @@ ul {
 .text-content {
     flex-grow: 1; /* Allows the text content to take up the remaining space */
     height: auto
+    
 }
+
+.text-content-home {
+  flex-grow: 1; /* Allows the text content to take up the remaining space */
+  height: auto
+  
+}
+.slideshow-container {
+  width: 100%; /* Maximum width of the container */
+  height: auto; /* Keeps the image aspect ratio */
+  position: relative;
+
+}
+
+.mySlides {
+  display: none;
+}
+
+.fade {
+  /* Add animation for fade effect (optional) */
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Style for navigation buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%)
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: grey;
+  opacity: 40%;
+}
+.prev:hover, .next:hover {
+  opacity: 100%
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Style for the dots/circles */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+
+/*////////////////////////////////////////
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.mySlides1container {
+  width: 50%;
+  position: absolute;
+  left: 25%;
+}
+
+/* Hide the images by default */
+.mySlides1 {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev1,
+.next1 {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next1 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev1 {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev1:hover,
+.next1:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+@-webkit-keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
 /* Responsive design adjustments */
 @media screen and (min-width: 960px) {
     /* Other responsive styles... */
