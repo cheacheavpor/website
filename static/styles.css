@@ -1,4 +1,16 @@
 /* Reset some default styles */
+
+body {
+  background-image: url("background.jpg");
+  background-size: cover; /* Cover the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 ul {
     margin: 0;
     padding: 0;
