@@ -1,0 +1,58 @@
+sudo systemctl restart apache2
+
+change the flask.conf file to
+
+<VirtualHost *:80>
+    ServerName cheacheavpor.org
+    DocumentRoot /opt/website
+
+    ErrorLog ${APACHE_LOG_DIR}/http-error.log
+    CustomLog ${APACHE_LOG_DIR}/http-access.log combined
+
+    <Directory /opt/website>
+        Require all granted
+    </Directory>
+
+    <Directory /opt/website/.well-known>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+Then verify
+
+After verification come back and change to file back to 
+
+<VirtualHost *:443>
+    ServerName cheacheavpor.org
+    DocumentRoot /opt/website
+
+    SSLEngine on
+    SSLCertificateFile /etc/ssl/certificate.crt
+    SSLCertificateChainFile /etc/ssl/ca_bundle.crt
+    SSLCertificateKeyFile /etc/ssl/private/private.key
+
+    WSGIDaemonProcess app user=www-data group=www-data threads=5 python-home=/opt/website/flask-venv
+    WSGIScriptAlias / /opt/website/flask-app.wsgi
+    ErrorLog ${APACHE_LOG_DIR}/flask-error.log
+    CustomLog ${APACHE_LOG_DIR}/flask-access.log combined
+
+    <Directory /opt/website>
+        WSGIProcessGroup app
+        WSGIApplicationGroup %{GLOBAL}
+        Require all granted
+    </Directory>
+
+    <Directory /opt/website/.well-known>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+    </Directory>
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerName cheacheavpor.org
+    Redirect / https://cheacheavpor.org/
+    DocumentRoot /opt/website
+</VirtualHost> 
