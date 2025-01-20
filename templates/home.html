@@ -1,139 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - C.P. Chea's Blog</title>
+    <title>Home - Cheav Por Chea Website</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <style>
-        /* Inline styles moved here for quick access; consider moving to a CSS file for better maintainability */
+        /* Thumbnail images */
         .row {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: nowrap;
-            overflow-x: auto;
+            overflow-x: auto; /* Allows horizontal scrolling if necessary */
         }
 
         .column {
-            flex: 0 0 auto;
-            margin: 2px;
-        }
-
-        .slideshow-container {
-            position: relative;
-            max-width: 100%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        .mySlides {
-            display: none;
-            text-align: center;
-        }
-
-        .mySlides img {
-            width: 100%;
-            max-width: 800px; /* Set a maximum width for images */
-            height: auto; /* Ensure proportional scaling */
-            margin: auto; /* Center the image */
-            display: block;
-        }
-
-        .fade {
-            animation: fadeEffect 1.5s;
-        }
-
-        @keyframes fadeEffect {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            flex: 0 0 auto; /* Prevents columns from shrinking */
+            margin: 2px; /* Add some space between thumbnails */
         }
     </style>
 </head>
-
 <body>
-    <header>
-        <div>
-            <h1>C.P. Chea's Blog</h1>
-        </div>
+    
+    <div>
+        <h1>C.P. Chea's Blog</h1>
         <nav class="navbar">
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
-                <li class="dropdown">
-                    <button class="dropbtn">
-                        Publications
-                        <i class="fa fa-caret-down"></i>
-                    </button>
+                <div class="dropdown"> <button class="dropbtn">Publications
+                    <i class="fa fa-caret-down"></i>
+                  </button> 
+                    <!-- check what does this mean -->
                     <div class="dropdown-content">
                         <a href="/pub_robotic">Robotic Construction</a>
                         <a href="/pub_structure">Structural Engineering</a>
                         <a href="/pub_seismic">Seismic Engineering</a>
                     </div>
-                </li>
+                </div>              
                 <li><a href="/projects">Projects</a></li>
-                <li><a href="/awards">Honors & Awards</a></li>
+                <li><a href="/awards">Honors&Awards</a></li>
                 <li><a href="/documentations">Documentations</a></li>
                 <li><a href="/about">About Me</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+    <div>
+        <p> </p>
+    </div>
+    <!-- <div>
+        <figure class="homeimage">
+            <img src="static/home.jpg" alt="My backgroud">
+            <figcaption>Graduated in Monash University</figcaption>
+        </figure>
+    </div> -->
+    <div class="slideshow-container">
 
-    <main>
-        <section class="slideshow-container">
-            <!-- Slide 1 -->
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 5</div>
-                <img src="static/image1.jpg" alt="Robotic Construction of RF Structure">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <div class="background-container-home">
+                <img src="static/image1.jpg" alt="first">
                 <div class="text-content-home">
-                    <h2>Robotic construction of reciprocal frame (RF) structure</h2>
-                    <p>
-                        "In recent years, there has been a significant increase in the interest on robotics across various industries, including medical surgery, manufacturing, agriculture, military, transportation, and construction..."
-                    </p>
+                    <h2><b>Robotic construction of reciprocal frame (RF) structure</b></h2>
+                    <p style="text-align: justify;"><i>"In recent years, there has been a significant increase in the interest on robotics across various industries, including medical surgery, manufacturing, agriculture, military, transportation, and construction. Robotic technologies have also shown great potential for applications in construction industry to improve efficiency, precision and safety, particularly in consideration of the repetitive, low-skill, and sometimes high-risk nature of many construction tasks. These advantages may also make robotic technologies more cost-effective and reliable than conventional construction methods in both short term and long run. The adoption of robotic technologies in construction is not only limited to efficiency improvements, it also holds the potential to significantly reduce construction waste and decrease the carbon footprint of this industry. As a result, robotic technologies may also contribute to the sustainable development of the construction industry, making them an increasingly attractive research interest for the construction industry."</i></p>
                     <p style="text-align: right;"><i>(Chea et al., 2023)</i></p>
                 </div>
+
+                    
+
             </div>
 
-            <!-- Slide 2 -->
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 5</div>
-                <img src="static/image2.gif" alt="Experimental Test of RF Structure">
-                <div class="text-content-home">
-                    <h2>Experimental test of reciprocal frame (RF) structure</h2>
-                    <p>
-                        "Reciprocal frame (RF) structures, also known as Nexorade, are self-supporting structural forms..."
-                    </p>
-                    <p style="text-align: right;"><i>(Chea et al., 2023)</i></p>
+        </div>
+      
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <div class="background-container-home">
+                <img src="static/image2.gif" alt="second">
+                <div class="text-content">
+                    <h2><b>Experimental test of reciprocal frame (RF) structure</b></h2>
+                    <p style="text-align: justify;"><i>"Reciprocal frame (RF) structures, also known as Nexorade, is a selfsupporting structural form with individual components supported by their neighbouring members. RF structures can be built to offer a complex form of structure with identical components and simple connections. this type of structure is recorded in many Chinese historical sources, including the painting Qingming Shanghe Tu (Along the River During the Qingming Festival) painted by Zeduan Zhang about a thousand years ago; a sketch of a similar structure is also found in an original manuscript by Leonardo da Vinci.</p> 
+                    <p style="text-align: justify;"> In modern construction, RF structures are often considered for use in temporary construction due to their undemanding and less time-consuming construction process. An advantage of common RF structures is that they require little strength in the connections than the friction created between members by gravity."</i></p>
+                    <p style="text-align: right;"><i>(Chea et al., 2022)</i></p>
                 </div>
-            </div>
-            <!-- Add more slides as necessary -->
-        </section>
-    </main>
+            </div>            
 
-    <footer>
-        <p>&copy; 2025 C.P. Chea. All rights reserved.</p>
-    </footer>
+            
+        </div>
+        
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <div class="background-container-home">
+                <img src="static/image5.gif" alt="fifth">
+                <div class="text-content">
+                    <h2><b>Collapse simulation of a structure</b></h2>
+                    <p style="text-align: justify;"><i>"In the building design code system of China, the frame-core tube structure is mandated to be designed as a dual lateral-force resisting system. This imposes strict requirements on the secondary lateral system of such structures, ensuring that the outer frame possesses adequate lateral stiffness and strength. In contrast, in the design codes of other countries (e.g., ASCE-7 of the United States), the outer frame of the frame-core tube structure is only required to carry vertical loads. Given these fundamental differences, comparing the two systems in terms of seismic performance, collapse resistance, and load distribution becomes an interesting research topic."</i></p>
+                    <p style="text-align: right;"><i>(Chea et al., 2019)</i></p>
+                </div>
+            </div>            
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <div class="background-container-home">
+                <img src="static/image3.gif" alt="third">
+                <div class="text-content">
+                    <h2><b>Cyclic loading of non-structural infill walls</b></h2>
+                    <p style="text-align: justify;"><i>"Masonry infill walls are a type of construction widely used as the
+                        envelope of multistory and high-rise buildings in urban areas. Infill walls were observed to have been severely damaged in past earthquakes, and blocks fell from the attached walls owing to the combined effects of infill wall damage and seismic acceleration. According to field investigations, these masonry infill walls usually have weak boundary connections with the main structure. This is especially true for the developing countries where quality control of the connection between the infill masonry walls and the main structures is difficult to be ensured. Statistics also show that earthquake-induced falling debris can cause a significant number of casualties. Moreover, falling debris can seriously hinder fast emergency evacuations and rescues."</i></p>
+                    <p style="text-align: right;"><i>(Chea et al., 2018)</i></p>
+                </div>
+            </div>            
+        </div>
 
-    <!-- Add JavaScript for slideshow functionality -->
-    <script>
-        let slideIndex = 0;
-        showSlides();
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <div class="background-container-home">
+                <img src="static/image4.png" alt="fourth">
+                <div class="text-content">
+                    <h2><b>Framework of construction automation</b></h2>
+                    <p style="text-align: justify;"><i>"To achieve a fully automated construction, a framework to connect computer-aided and robotic technologies used for construction should be firstly established. In general, structural construction may consist of several stages, including design, construction planning, manufacturing, transportation and final assembly :
+                        <ul>
+                            <li>&#x2022;&nbsp;&nbsp;&nbsp;With computer-aided design (CAD) technologies, all designs (architectural, mechanical, electrical and structural) can be digitalised. The construction schedule is then optimised following the designed building information.</li>
+                            <li>&#x2022;&nbsp;&nbsp;&nbsp;The component design is sent to the automation systems in the manufacturing plant. After the manufacturing of components, if flawed components are detected, an error report may be sent to central management for rearranging the construction schedule. </li>
+                            <li>&#x2022;&nbsp;&nbsp;&nbsp;Autonomous vehicles pick up the components according to the initial schedule provided by the BIM system, and the real-time location of the components during transportation is tracked and also sent to central management. </li>
+                            <li>&#x2022;&nbsp;&nbsp;&nbsp;The components are delivered to the construction site and assembled by the robotic system according to the building design.  "</li></i></p>
+                        <p style="text-align: right;"><i>(Chea et al., 2020)</i></p>
+                </div>
+            </div>            
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-        function showSlides() {
-            let slides = document.getElementsByClassName("mySlides");
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            slides[slideIndex - 1].style.display = "block";
-            setTimeout(showSlides, 3000); // Change slide every 3 seconds
-        }
-    </script>
-</body>
+        <!-- Next and previous buttons -->
+        
+    </div>
+    <br>
+      
+      <!-- The dots/circles -->
+      <!-- Navigation Dots -->
+<div style="text-align: center;">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+</div>
 
-</html>
+<!-- Section Heading -->
+<div style="text-align: center;">
+    <h1><i>Recent Activities</i></h1>
+</div>
+
+<!-- Image Gallery Container -->
+<div class="gallery-container">
+
+    <!-- Full-width Images -->
+    <div class="gallery-slide">
+        <div class="numbertext">1 / 7</div>
+        <img src="static/home_image1.jpg" alt="Lecturing in Monash University" class="gallery-image">
+    </div>
+
+    <div class="gallery-slide">
+        <div class="numbertext">2 / 7</div>
+        <img src="static/home_image2.jpg" alt="Robotic laboratory" class="gallery-image">
+    </div>
+
+    <div class="gallery-slide">
+        <div class="numbertext">3 / 7</div>
+        <img src="static/home_image3.jpg" alt="CIB conference" class="gallery-image">
+    </div>
+
+    <div class="gallery-slide">
+        <div class="numbertext">4 / 7</div>
+        <img src="static/home_image4.jpg" alt="IASS conference" class="gallery-image">
+    </div>
+
+    <div class="gallery-slide">
+        <div class="numbertext">5 / 7</div>
+        <img src="static/home_image5.jpg" alt="Open day of Monash University" class="gallery-image">
+    </div>
+
+    <div class="gallery-slide">
+        <div class="numbertext">6 / 7</div>
+        <img src="static/home_image6.png" alt="Lecturing in Monash University" class="gallery-image">
+    </div>
+
+    <div class="gallery-slide">
+        <div class="numbertext">7 / 7</div>
+        <img src="static/home_image7.png" alt="Demonstration of small-scale wind tunnel in Tsinghua University" class="gallery-image">
+    </div>
+
+    <!-- Navigation Buttons -->
+    <a class="prev-gallery" onclick="plusSlides1(-1)">&#10094;</a>
+    <a class="next-gallery" onclick="plusSlides1(1)">&#10095;</a>
+
+    <!-- Caption Container -->
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail Images -->
+    <div class="thumbnail-row">
+        <div class="thumbnail-column">
+            <img class="thumbnail demo cursor" src="static/home_image1.jpg" alt="Lecturing in Monash University" onclick="currentSlide1(1)">
+        </div>
+        <div class="thumbnail-column">
+            <img class="thumbnail demo cursor" src="static/home_image2.jpg" alt="Robotic laboratory" onclick="currentSlide1(2)">
+        </div>
+        <div class="thumbnail-column">
+            <img class="thumbnail demo cursor" src="static/home_image3.jpg" alt="CIB conference" onclick="currentSlide1(3)">
+        </div>
+        <div class="thumbnail-column">
+            <img class="thumbnail demo cursor" src="static/home_image4.jpg" alt="IASS conference" onclick="currentSlide1(4)">
+        </div>
+        <div class="thumbnail-column">
+            <img class="thumbnail demo cursor" src="static/home_image5.jpg" alt="Open day of Monash University" onclick="currentSlide1(5)">
+        </div>
+        <div class="thumbnail-column">
+            <img class="thumbnail demo cursor" src="static/home_image6.png" alt="Lecturing in Monash University" onclick="currentSlide1(6)">
+        </div>
+        <div class="thumbnail-column">
+            <img class="thumbnail demo cursor" src="static/home_image7.png" alt="Demonstration of small-scale wind tunnel in Tsinghua University" onclick="currentSlide1(7)">
+        </div>
+    </div>
+</div>
+
+<script src="static/js/slide.js"></script>
+
