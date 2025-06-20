@@ -73,51 +73,13 @@
 
     <div class="background-container">
         <div>
+            <iframe id="vs_iframe" src="https://www.viewstl.com/?embedded&color=gray" style="border:0;margin:0;width:100%;height:100%;"></iframe>
             <h2>3D Model: House</h2>
             <div id="stlViewer" style="width: 600px; height: 400px;"></div>
         </div>
     </div>
 
-    <script>
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, 600 / 400, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(600, 400);
-        document.getElementById('stlViewer').appendChild(renderer.domElement);
-
-        const ambientLight = new THREE.AmbientLight(0x404040, 2);
-        scene.add(ambientLight);
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-        directionalLight.position.set(0, 1, 1).normalize();
-        scene.add(directionalLight);
-
-        const controls = new THREE.OrbitControls(camera, renderer.domElement);
-
-        const loader = new THREE.STLLoader();
-        loader.load("{{ url_for('static', filename='House.stl') }}", function (geometry) {
-            const material = new THREE.MeshPhongMaterial({ color: 0x5588ff, specular: 0x111111, shininess: 200 });
-            const mesh = new THREE.Mesh(geometry, material);
-            scene.add(mesh);
-            mesh.rotation.x = -Math.PI / 2;
-
-            // Center camera to model
-            const box = new THREE.Box3().setFromObject(mesh);
-            const center = box.getCenter(new THREE.Vector3());
-            controls.target.copy(center);
-            controls.update();
-        }, undefined, function (error) {
-            console.error("Error loading STL file:", error);
-        });
-
-        camera.position.z = 5;
-
-        function animate() {
-            requestAnimationFrame(animate);
-            controls.update();
-            renderer.render(scene, camera);
-        }
-        animate();
-    </script>
+    
 
 </body>
 </html>
