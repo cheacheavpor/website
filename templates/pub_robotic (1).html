@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home - Cheav Por Chea Website</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div>
+        <h1>C.P. Chea's Blog</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li></li><a href="/">Home</a></li>
+                <div class="dropdown"> <button class="dropbtn">Publications
+                    <i class="fa fa-caret-down"></i>
+                  </button> 
+                    <!-- check what does this mean -->
+                    <div class="dropdown-content">
+                        <a href="/pub_robotic">Robotic Construction</a>
+                        <a href="/pub_structure">Structural Engineering</a>
+                        <a href="/pub_seismic">Seismic Engineering</a>
+                    </div>
+                </div>              
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/awards">Honors&Awards</a></li>
+                <li><a href="/documentations">Documentations</a></li>
+                <li><a href="/about">About Me</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <p> </p>
+    </div>
+    <h3>
+        <u>Design and development of robotic collaborative system for automated construction of reciprocal frame structures</u>
+    </h3>
+    <p><b>Abstract: </b> Robotic technologies have shown their potential to improve efficiency, precision, and safety for construction tasks. In this paper, the concept of design for robotic construction (DfRC) is introduced, and robotic collaborative systems are developed for the construction of load-carrying structures. An automated structural assembly was achieved and demonstrated through robotics with a preference for reciprocal frame (RF) structures. Key innovations include the use of magnetic temporary connections to minimize offsets ofmobile robots and linear actuators as temporary supports during construction. Furthermore, specific procedures are formulated to navigate the robots and to target and install the components using a fiducial marker system and simultaneous localization and mapping packages, with consideration of structural deformation during construction due to self-weight. The successful assembly of a 4.5-m span RF structure demonstrates the potential of DfRC and the proposed robotic collaborative system in the automated construction of load-carrying structures.</p>
+    <p><b>Link to this article: </b><a href="https://doi.org/10.1111/mice.13145">https://doi.org/10.1111/mice.13145</a></p>
+    <p><b>How to cite this article: </b>CHEA Cheav Por, BAI Yu, ZHOU Zhuomin. (2023). Design and development of robotic collaborative system for automated construction of reciprocal frame structures. Computer-Aided Civil and Infrastructure Engineering,1–20.</p>
+
+    <h3>
+        <u>An integrated review of automation and robotic technologies for structural prefabrication and construction</u>
+    </h3>
+    <p><b>Abstract: </b> Building construction has developed from the use of primitive tools to that of machinery, with a tendency toward automation. Automation of processes and robotics can improve efficiency, accuracy and safety in construction. On the other hand, structural prefabrication for construction is increasingly being adopted worldwide to enhance productivity and to alleviate the environmental impact of conventional construction processes. The combination and application of automation and prefabrication technologies may therefore introduce new developments to the construction industry. This paper provides a comprehensive review of the use of automation technology for structural prefabrication and construction, including recent developments, challenges and future trends. Five stages following the sequence of construction are proposed: design, construction management, robotic manufacturing, autonomous transportation and automatic structural assembly. The paper concludes that the widespread use of automation technology is preferable to structural prefabrication for construction, and that the design for robotic construction introduced through connection innovations may be beneficial as a means of avoiding complex operations and thus improving the efficiency of robotic assembly processes.</p>
+    <p><b>Link to this article: </b><a href="https://doi.org/10.1093/tse/tdaa007">https://doi.org/10.1093/tse/tdaa007</a></p>
+    <p><b>How to cite this article: </b>CHEA Cheav Por, BAI Yu, PAN Xuebei, ARASHPOUR Mehrdad, XIE Yunpeng. (2020). An Integrated Review of Automation and Robotic Technologies for Structural Prefabrication and Construction. Transportation Safety and Environment, 2: 81-96.</p>
+    
+    <h3>
+        <u>Positional inaccuracy investigation and innovative connection solution for robotic construction of load carrying structures</u>
+    </h3>
+    <p><b>Abstract: </b> Robotic construction of load carrying structures in civil engineering becomes promising with the supports from robotics, computer-vision, and design for manufacturing and assembly. A multi-robot system was developed to demonstrate an automated construction of reciprocal frame structures where mobile robots were used to facilitate the access of robotic arms and a series of programming packages were developed to automate the construction. Furthermore, the AprilTag fiducial marker system was applied as a positioning system to align the mobile robots during construction tasks and to target the structural components. In this context, the key challenges are centred on the understanding of the accuracy and tolerance of the robotic system in positioning and navigation. To this end, experimental methods were developed in this study to understand the observed distances and the accuracy of the positioning system. The optimal observation distance for the positioning system in the robotic system was then determined considering the positional and orientational accuracies of the AprilTag fiducial marker system using a red, green, blue-depth (RGB-D) camera. Moreover, experiments were conducted to study the impact of the barycentre of robotic arms on the precision of the mobile robots and to determine the offset of the mobile robot during the manoeuvre. In consideration of the positional inaccuracies, the magnetic connection approach was creatively implemented using their inherent self-aligning property. The corresponding effective range was also firstly determined, within which the structural components could be installed successfully.</p>
+    <p><b>Link to this article: </b><a href="https://doi.org/10.1016/j.iintel.2025.100141">https://doi.org/10.1016/j.iintel.2025.100141</a></p>
+    <p><b>How to cite this article: </b>CHEA Cheav Por, BAI Yu, FANG Yihai. (2025). Positional inaccuracy investigation and innovative connection solution for robotic construction of load carrying structures. Journal of Infrastructure Intelligence and Resilience. 100141</p>
+
+    <h3>
+        <u>Global path planning for autonomous construction vehicles in building construction: A comparative study with a focus on vehicle kinematic characteristics</u>
+    </h3>
+    <p><b>Abstract: </b> Technological advancements in robotics and automation have led to a growing emphasis on integration into construction industry from a global research context. In particular, autonomous construction vehicles (ACVs) stand out as a pivotal innovation. One key aspect of successful deployment of ACVs on construction sites is the path planning technology, especially the global path planning (GPP) methods. Thus, this study conducted a comparative study of the six GPP algorithms from various underlying principles, including graph search methods (Dijkstra and A*), sampling-based methods (RRT and RRT*), evolutionary computation (Genetic Algorithms), and artificial intelligence (Deep Q-Networks), to reveal how GPP algorithms perform on the travel of ACVs. These algorithms were evaluated with consideration of the kinematic characteristics of typical construction vehicles, including truck-trailers and excavators, within a typical unstructured real-world building construction site and based on two tasks and eight criteria encompassing efficiency and safety. The findings were analysed from three perspectives, i.e. the planned global paths and travel paths of ACVs, the performance of algorithms in each metric, and the overall performance of each algorithm, to identify the strengths of each GPP algorithm. GAs excel in generating smoother travel paths than others, whereas the global paths from RRT and DQN exhibit unpredictable changes, leading to a meandering travel paths for ACVs. The quality of global paths induces a greater impact on differential-wheeled excavators compared to front-wheel steering truck-trailers. Practical guidance can therefore be provided to select and improve the GPP algorithms and thereby to enhance the safety and efficiency of ACVs on construction sites.</p>
+    <p><b>Link to this article: </b><a href="https://doi.org/10.1016/j.jobe.2024.109837">https://doi.org/10.1016/j.jobe.2024.109837</a></p>
+    <p><b>How to cite this article: </b>ZHOU Zhuomin, ABDI Elahe, CHEA Cheav Por, BAI Yu. (2024). Global path planning for autonomous construction vehicles in building construction: A comparative study with a focus on vehicle kinematic characteristics. Journal of Building Engineering. 109837</p>
+
+    <h3>
+        <u>Automated assembly of reciprocal frame structures using robotics</u>
+    </h3>
+    <p><b>Abstract: </b> In this paper, the robotization of structural construction was studied in preference to the undemanding assembly of the reciprocal frame (RF) structures. Formulas were developed to automate the process of geometric forming and component evaluation. Subsequently, the robotic cooperative system was established to assemble the structure according to the positions and orientations of each component from the geometric forming module. The robotic system consists of two robotic arms, two navigating robots, depth cameras, and customized grippers. The structure was made from pultruded glass fibre reinforced polymer (GFRP) members owing to their lightweight, high strength and corrosion resistance. Concepts of temporary connections were also proposed to eliminate the offset generated during the construction. Finally, the comparative studies of the constructions in different light environments and with different ground obstacles were investigated through experimental investigations. The results showed that the structure can be successfully assembled with the proposed robotic system and the assistance of the temporary connection in most of the light conditions and ground obstacles.</p>
+    <p><b>Link to this article: </b><a href="https://doi.org/10.1088/1755-1315/1101/7/072013">https://doi.org/10.1088/1755-1315/1101/7/072013</a></p>
+    <p><b>How to cite this article: </b>CHEA Cheav Por, Bai Yu. (2022). Automated assembly of reciprocal frame structures using robotics. In proceeding of the 9th International Conference on Innovative Production and Construction. Melbourne, Australia</p>
+

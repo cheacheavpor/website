@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home - Cheav Por Chea Website</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div>
+        <h1>C.P. Chea's Blog</h1>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li></li><a href="/">Home</a></li>
+                <div class="dropdown"> <button class="dropbtn">Publications
+                    <i class="fa fa-caret-down"></i>
+                  </button> 
+                    <!-- check what does this mean -->
+                    <div class="dropdown-content">
+                        <a href="/pub_robotic">Robotic Construction</a>
+                        <a href="/pub_structure">Structural Engineering</a>
+                        <a href="/pub_seismic">Seismic Engineering</a>
+                    </div>
+                </div>              
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/awards">Honors&Awards</a></li>
+                <li><a href="/documentations">Documentations</a></li>
+                <li><a href="/about">About Me</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <p> </p>
+    </div>
+    <!-- <div>
+        <figure class="homeimage">
+            <img src="static/home.jpg" alt="My backgroud">
+            <figcaption>Graduated in Monash University</figcaption>
+        </figure>
+    </div> -->
+    <div class="background-container">
+        <img src="static/home.jpg" alt="My background">
+        <div class="text-content">
+            <h2>Educational Background</h2>
+            <p><b>2019-2023: </b>PhD of Civil Engineering in Monash University </p>
+            <p><b>2016-2019: </b>Master of Science of Civil Engineering in Tsinghua University </p>
+            <p><b>2012-2016: </b>Bachelor of Civil Engineering in Harbin Engineering University </p>
+            <h2>Teaching Experience</h2>
+            <p><b>2023-now : </b>Sessional Lecturer in the unit of Building Structures and Technology for undergraduates and graduates in Monash University (CIV3221 and CIV5121) </p>
+            <p><b>2024-now : </b>Coordinator of Monash Robotic Construction Workshop </p>
+            <p><b>2020-2023: </b>Teaching associate in the unit of Building Structures and Technology for undergraduates and graduates in Monash University (CIV3221 and CIV5121) </p>
+            <p><b>2021-2022: </b>Guest speaker in the unit of Infrastructure Information Management for graduates in Monash University (CIV5899) </p>
+            <p><b>2016-2018: </b>Teaching associate of Science of Disasters in Tsinghua University </p>
+            <h2>Professional Experience</h2>
+            <p><b>2023-now : </b>Postdoctoral researcher in Civil Department at Monash University </p>
+            <p><b>2020-2021: </b>Research assistant working on ‘Brick paving robot’ industrial project</p>
+            <p><b>2017&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>Intern at China Nuclear Power Engineering Co., Ltd.,</p>
+            <p><b>2016-2017: </b>Research assistant working on ‘Earthquake-induced falling debris of exterior infill walls and its impact to pedestrian evacuation’ research project</p>
+            <p><b>2015-2016: </b>Director of the Academic Department of International Student Union in Harbin Engineering University. </b></p>
+            <h2>Contact</h2>
+            <p><b>Email: </b>paul.chea@monash.edu</p>
+            <p><b>Tel: </b>+(61)422988898</p>
+        </div>
+    </div>
+</body>
+</html>
