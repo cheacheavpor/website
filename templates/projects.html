@@ -100,10 +100,17 @@
         </div>
     </div>
 
-    <script>
+
+    <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+
+    <script type="module">
+        import * as THREE from 'https://unpkg.com/three@0.152.2/build/three.module.js';
+        import { STLLoader } from 'https://unpkg.com/three@0.152.2/examples/jsm/loaders/STLLoader.js';
+        import { OrbitControls } from 'https://unpkg.com/three@0.152.2/examples/jsm/controls/OrbitControls.js';
+
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, 600/400, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        const renderer = new THREE.WebGLRenderer();
         renderer.setSize(600, 400);
         document.getElementById('stlViewer').appendChild(renderer.domElement);
 
@@ -113,29 +120,27 @@
         directionalLight.position.set(0, 1, 1).normalize();
         scene.add(directionalLight);
 
-        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        const controls = new OrbitControls(camera, renderer.domElement);
 
-        const loader = new THREE.STLLoader();
+        const loader = new STLLoader();
         loader.load('{{ url_for("static", filename="House.stl") }}', function (geometry) {
             const material = new THREE.MeshPhongMaterial({ color: 0x5588ff, specular: 0x111111, shininess: 200 });
             const mesh = new THREE.Mesh(geometry, material);
             scene.add(mesh);
             mesh.rotation.x = -Math.PI / 2;
-            // Center camera on model
-            const box = new THREE.Box3().setFromObject(mesh);
-            const center = box.getCenter(new THREE.Vector3());
-            controls.target.copy(center);
-            controls.update();
         });
 
-        camera.position.set(0, 0, 5);
+        camera.position.z = 5;
 
         function animate() {
             requestAnimationFrame(animate);
+            controls.update();
             renderer.render(scene, camera);
         }
         animate();
     </script>
+</body>
+
 
 </body>
 </html>
