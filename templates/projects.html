@@ -4,26 +4,30 @@
 <head>
     <title>Home - Cheav Por Chea Website</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-	<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/loaders/STLLoader.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r137/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r137/examples/js/loaders/STLLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r137/examples/js/controls/OrbitControls.js"></script>
+
 </head>
 <body>
     <div>
         <h1>C.P. Chea's Blog</h1>
         <nav class="navbar">
             <ul class="nav-links">
-                <li></li><a href="/">Home</a></li>
-                <div class="dropdown"> <button class="dropbtn">Publications
-                    <i class="fa fa-caret-down"></i>
-                  </button> 
+                <li></li>
+                <a href="/">Home</a></li>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        Publications
+                        <i class="fa fa-caret-down"></i>
+                    </button>
                     <!-- check what does this mean -->
                     <div class="dropdown-content">
                         <a href="/pub_robotic">Robotic Construction</a>
                         <a href="/pub_structure">Structural Engineering</a>
                         <a href="/pub_seismic">Seismic Engineering</a>
                     </div>
-                </div>              
+                </div>
                 <li><a href="/projects">Projects</a></li>
                 <li><a href="/awards">Honors&Awards</a></li>
                 <li><a href="/documentations">Documentations</a></li>
@@ -36,96 +40,102 @@
     </div>
 
 
-<div class="background-container">
-    <div>
-        <!-- Paste your embed code here -->
-        <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/69mJ5CEKS80" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-        </iframe>
+    <div class="background-container">
+        <div>
+            <!-- Paste your embed code here -->
+            <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/69mJ5CEKS80"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+        <div class="text-content">
+            <h2>Robotic Construction For Reciprocal Frame Structure</h2>
+            <p> This research focuses on developing and implementing robotic technologies in the construction of Reciprocal Frame (RF) structures, which are self-interlocking and efficient in assembly. The study began with the development of mathematical approaches for forming RF structures and calculating internal forces in their components, using pultruded glass fibre reinforced polymers (GFRP). Experimental and finite element analysis revealed that an RF structure of specific dimensions had a significant load capacity while maintaining a low weight.</p>
+            <p> The research then progressed to robotize the assembly of these structures in a laboratory environment. Design for Robotic Construction (DfRC) strategies were introduced, including the use of temporary connections and supports to facilitate robotic assembly. The <a href="https://github.com/cheacheavpor/robotic_system_for_RF_structure.git">robotic system</a> developed includes mobile robots, robotic arms, depth cameras, LiDAR systems, and grippers. Programming modules were created for geometric form-finding, robotic operation, and collaboration.</p>
+            <p> Key aspects of robotic operation, such as navigation and component targeting, were developed using SLAM and AprilTag algorithms, enhancing precision and efficiency. The result was the successful completion of the structural construction by the robotic system, demonstrating the feasibility and effectiveness of robotization in building RF structures.</p>
+        </div>
     </div>
-    <div class="text-content">
-        <h2>Robotic Construction For Reciprocal Frame Structure</h2>
-        <p> This research focuses on developing and implementing robotic technologies in the construction of Reciprocal Frame (RF) structures, which are self-interlocking and efficient in assembly. The study began with the development of mathematical approaches for forming RF structures and calculating internal forces in their components, using pultruded glass fibre reinforced polymers (GFRP). Experimental and finite element analysis revealed that an RF structure of specific dimensions had a significant load capacity while maintaining a low weight.</p>
-        <p> The research then progressed to robotize the assembly of these structures in a laboratory environment. Design for Robotic Construction (DfRC) strategies were introduced, including the use of temporary connections and supports to facilitate robotic assembly. The <a href="https://github.com/cheacheavpor/robotic_system_for_RF_structure.git">robotic system</a> developed includes mobile robots, robotic arms, depth cameras, LiDAR systems, and grippers. Programming modules were created for geometric form-finding, robotic operation, and collaboration.</p>
-        <p> Key aspects of robotic operation, such as navigation and component targeting, were developed using SLAM and AprilTag algorithms, enhancing precision and efficiency. The result was the successful completion of the structural construction by the robotic system, demonstrating the feasibility and effectiveness of robotization in building RF structures.</p>
+
     </div>
-</div>
+    <div><p></p></div>
+    <div class="background-container">
+        <div>
+            <!-- Paste your embed code here -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RBxy8IXPTz4?si=fSoDB9KLnrhpns5O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="text-content">
+            <h2>Site activities assisted by construction robots</h2>
+            <p> This research focuses on developing and optimising methods for locating robots in path-undefined construction sites and enhancing the reliability of robotic navigation algorithms across various construction site configurations and environments. </p>
 
-</div>
-<div><p></p></div>
-<div class="background-container">
-    <div>
-        <!-- Paste your embed code here -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/RBxy8IXPTz4?si=fSoDB9KLnrhpns5O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </div>
-    <div class="text-content">
-        <h2>Site activities assisted by construction robots</h2>
-        <p> This research focuses on developing and optimising methods for locating robots in path-undefined construction sites and enhancing the reliability of robotic navigation algorithms across various construction site configurations and environments. </p> 
-        
+
     </div>
-</div>
+    <div><p></p></div>
+    <div class="background-container">
+        <div>
+            <!-- Paste your embed code here -->
+            <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/xt2ayJi6GDc"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+        </div>
+        <div class="text-content">
+            <h2>Paving robot</h2>
+            <p> This research focuses on developing and implementing robotic technologies in the pedestrian path paving project. The model-based tracking method is adopted to target a brick from the brick stack. </p>
 
-</div>
-<div><p></p></div>
-<div class="background-container">
-    <div>
-        <!-- Paste your embed code here -->
-        <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/xt2ayJi6GDc" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-        </iframe>
+        </div>
     </div>
-    <div class="text-content">
-        <h2>Paving robot</h2>
-        <p> This research focuses on developing and implementing robotic technologies in the pedestrian path paving project. The model-based tracking method is adopted to target a brick from the brick stack. </p> 
-        
+
+
+
+    <div class="background-container">
+        <div>
+            <h2>3D Model: House</h2>
+            <div id="stlViewer" style="width: 600px; height: 400px;"></div>
+        </div>
     </div>
-</div>
 
-<div class="background-container">
-    <div>
-        <h2>3D Model: House</h2>
-        <div id="stlViewer" style="width: 600px; height: 400px;"></div>
-    </div>
-</div>
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, 600/400, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(600, 400);
+        document.getElementById('stlViewer').appendChild(renderer.domElement);
 
-<script>
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, 600/400, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(600, 400);
-    document.getElementById('stlViewer').appendChild(renderer.domElement);
+        const ambientLight = new THREE.AmbientLight(0x404040, 2);
+        scene.add(ambientLight);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+        directionalLight.position.set(0, 1, 1).normalize();
+        scene.add(directionalLight);
 
-    const ambientLight = new THREE.AmbientLight(0x404040, 2);
-    scene.add(ambientLight);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    directionalLight.position.set(0, 1, 1).normalize();
-    scene.add(directionalLight);
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
-    const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        const loader = new THREE.STLLoader();
+        loader.load('{{ url_for("static", filename="House.stl") }}', function (geometry) {
+            const material = new THREE.MeshPhongMaterial({ color: 0x5588ff, specular: 0x111111, shininess: 200 });
+            const mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+            mesh.rotation.x = -Math.PI / 2;
+            // Center camera on model
+            const box = new THREE.Box3().setFromObject(mesh);
+            const center = box.getCenter(new THREE.Vector3());
+            controls.target.copy(center);
+            controls.update();
+        });
 
-    const loader = new THREE.STLLoader();
-    loader.load('{{ url_for('static', filename='House.stl') }}', function (geometry) {
-        const material = new THREE.MeshPhongMaterial({ color: 0x5588ff, specular: 0x111111, shininess: 200 });
-        const mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
-        mesh.rotation.x = -Math.PI / 2;
-    });
+        camera.position.set(0, 0, 5);
 
-    camera.position.z = 5;
-
-    function animate() {
-        requestAnimationFrame(animate);
-        controls.update();
-        renderer.render(scene, camera);
-    }
-    animate();
-</script>
+        function animate() {
+            requestAnimationFrame(animate);
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
 
 </body>
 </html>
