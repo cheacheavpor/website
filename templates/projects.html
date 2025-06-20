@@ -123,7 +123,7 @@
         const controls = new OrbitControls(camera, renderer.domElement);
 
         const loader = new STLLoader();
-        loader.load('{{ url_for("static", filename="static/House.stl") }}', function (geometry) {
+        loader.load('/static/House.stl', function (geometry) {
             const material = new THREE.MeshPhongMaterial({ color: 0x5588ff, specular: 0x111111, shininess: 200 });
             const mesh = new THREE.Mesh(geometry, material);
             scene.add(mesh);
