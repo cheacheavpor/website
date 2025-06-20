@@ -4,10 +4,7 @@
 <head>
     <title>Home - Cheav Por Chea Website</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-    <!-- Load Three.js non-module version -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r137/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r137/examples/js/loaders/STLLoader.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/mrdoob/three.js@r137/examples/js/controls/OrbitControls.js"></script>
+
 </head>
 
 <body>
@@ -73,7 +70,7 @@
 
     <div class="background-container">
         <div>
-            <iframe id="vs_iframe" src="https://github.com/cheacheavpor/website/blob/master/static/House.stl" style="border:0;margin:0;width:100%;height:100%;"></iframe>
+            <iframe id="vs_iframe" src="http://www.viewstl.com/viewstl.php?url=http://localhost:5000/static/House.stl&local" style="border:0;margin:0;width:100%;height:100%;"></iframe>
         </div>
         <div class="text-content">
             <h2>3D House</h2>
